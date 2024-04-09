@@ -41,7 +41,7 @@ class SplashActivity : ComponentActivity() {
         setContent {
             Splash()
 
-            val mContext  
+            val mContext = LocalContext.current
             val coroutineScope = rememberCoroutineScope()
             coroutineScope.launch {
                 delay(1000)
