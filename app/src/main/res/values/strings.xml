@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Levo</string>
+    <string name="title_activity_LayoutActivity">LayoutActivity</string>
+    <string name="title_activity_intent">IntentActivity</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="title_activity_destination">DestinationActivity</string>
+    <string name="title_activity_explore">ExploreActivity</string>
+    <string name="title_activity_lowty">LowtyActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+</resources>
