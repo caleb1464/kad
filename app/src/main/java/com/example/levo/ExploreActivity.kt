@@ -77,7 +77,6 @@ fun Explore() {
                     )
                 }
             },
-
             actions = {
                 IconButton(
                     onClick = {
@@ -103,12 +102,7 @@ fun Explore() {
                         tint = Color.Black
                     )
 
-
                     Spacer(modifier = Modifier.width(10.dp))
-
-
-
-
 
                     Icon(
                     imageVector = Icons.Default.Search,
@@ -116,10 +110,10 @@ fun Explore() {
                     tint = Color.Black
                     )
             },
-
-
             )//End of TopAppBar
-        Column (modifier = Modifier.verticalScroll(rememberScrollState()))
+
+        Column (modifier = Modifier
+            .verticalScroll(rememberScrollState()))
         {
             Text(text = "Tickets",
                 fontSize = 40.sp,
@@ -132,7 +126,9 @@ fun Explore() {
         Spacer(modifier = Modifier.height(10.dp))
 
        //Row 1
-       Row(modifier = Modifier.padding(start = 20.dp)){
+       Row(modifier = Modifier
+           .padding(start = 20.dp))
+       {
            //Column
            Column {
                Card (modifier = Modifier
@@ -143,7 +139,7 @@ fun Explore() {
                        contentAlignment = Alignment.Center
                    )
                    {
-                       Image(painter = painterResource(id = R.drawable.singapore),
+                       Image(painter = painterResource(id = R.drawable.italy),
                            contentDescription = "Singapore",
                            modifier = Modifier.fillMaxSize(),
                            contentScale = ContentScale.FillBounds
@@ -159,7 +155,7 @@ fun Explore() {
                    }
                }
 
-               Text(text = "Colosseum",
+               Text(text = "Italy",
                    fontSize = 20.sp,
                    fontFamily = FontFamily.Serif,
                    fontWeight = FontWeight.Bold
@@ -180,7 +176,6 @@ fun Explore() {
                Text(text = "443 reviews",
                    fontSize = 15.sp,
                    fontFamily = FontFamily.Serif,
-
                    )
 
                Spacer(modifier = Modifier.height(2.dp))
@@ -230,7 +225,7 @@ fun Explore() {
                        contentAlignment = Alignment.Center
                    )
                    {
-                       Image(painter = painterResource(id = R.drawable.singapore),
+                       Image(painter = painterResource(id = R.drawable.china),
                            contentDescription = "Singapore",
                            modifier = Modifier.fillMaxSize(),
                            contentScale = ContentScale.FillBounds
@@ -246,7 +241,7 @@ fun Explore() {
                    }
                }
 
-               Text(text = "Colosseum",
+               Text(text = "China",
                    fontSize = 20.sp,
                    fontFamily = FontFamily.Serif,
                    fontWeight = FontWeight.Bold
@@ -267,7 +262,6 @@ fun Explore() {
                Text(text = "443 reviews",
                    fontSize = 15.sp,
                    fontFamily = FontFamily.Serif,
-
                    )
 
                Spacer(modifier = Modifier.height(2.dp))
@@ -321,7 +315,7 @@ fun Explore() {
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.singapore),
+                        Image(painter = painterResource(id = R.drawable.zimbabwe),
                             contentDescription = "Singapore",
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.FillBounds
@@ -337,7 +331,7 @@ fun Explore() {
                     }
                 }
 
-                Text(text = "Colosseum",
+                Text(text = "Zimbabwe",
                     fontSize = 20.sp,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold
@@ -408,7 +402,7 @@ fun Explore() {
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.singapore),
+                        Image(painter = painterResource(id = R.drawable.kenya),
                             contentDescription = "Singapore",
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.FillBounds
@@ -424,7 +418,7 @@ fun Explore() {
                     }
                 }
 
-                Text(text = "Colosseum",
+                Text(text = "Kenya",
                     fontSize = 20.sp,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold
@@ -444,9 +438,8 @@ fun Explore() {
 
                 Text(text = "443 reviews",
                     fontSize = 15.sp,
-                    fontFamily = FontFamily.Serif,
-
-                    )
+                    fontFamily = FontFamily.Serif
+                )
 
                 Spacer(modifier = Modifier.height(2.dp))
 
@@ -488,7 +481,8 @@ fun Explore() {
         Spacer(modifier = Modifier.height(10.dp))
 
         //Row 3
-        Row(modifier = Modifier.padding(start = 20.dp)){
+        Row(modifier = Modifier.padding(start = 20.dp))
+        {
             //Column
             Column {
                 Card (modifier = Modifier
@@ -499,7 +493,7 @@ fun Explore() {
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.singapore),
+                        Image(painter = painterResource(id = R.drawable.paris),
                             contentDescription = "Singapore",
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.FillBounds
@@ -515,7 +509,7 @@ fun Explore() {
                     }
                 }
 
-                Text(text = "Colosseum",
+                Text(text = "Paris",
                     fontSize = 20.sp,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold
@@ -586,7 +580,7 @@ fun Explore() {
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.singapore),
+                        Image(painter = painterResource(id = R.drawable.phillipines),
                             contentDescription = "Singapore",
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.FillBounds
@@ -602,7 +596,7 @@ fun Explore() {
                     }
                 }
 
-                Text(text = "Colosseum",
+                Text(text = "Phillipines",
                     fontSize = 20.sp,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold

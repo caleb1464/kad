@@ -47,28 +47,24 @@ class IntentActivity : ComponentActivity() {
         }
     }
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyIntents(){
     Column(modifier = Modifier
         .fillMaxSize()
         .paint(
-            painterResource(id = R.drawable.background),
+            painterResource(id = R.drawable.splash),
             contentScale = ContentScale.FillBounds
         )
-    ) {
+    )
+    {
         val mContext = LocalContext.current
-//Start of TopAppBar
-
+        //Start of TopAppBar
         TopAppBar(
             title = { Text(text = "Home", color = Color.White) },
             colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Red),
             navigationIcon = {
-                IconButton(onClick = {
-                    mContext.startActivity(Intent(mContext, LayoutActivity::class.java))
-                }
-                )
+                IconButton(onClick = {mContext.startActivity(Intent(mContext, LayoutActivity::class.java))})
                 {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
@@ -77,7 +73,6 @@ fun MyIntents(){
                     )
                 }
             },
-
             actions = {
                 IconButton(
                     onClick = {
@@ -102,12 +97,10 @@ fun MyIntents(){
                     contentDescription = "Settings",
                     tint = Color.White
                 )
-
             },
-
-
             )
         //End of TopAppBar
+
         OutlinedButton(
             onClick = {
                 val simToolKitLaunchIntent =
@@ -119,7 +112,8 @@ fun MyIntents(){
                 .padding(start = 30.dp, end = 30.dp),
             shape = RoundedCornerShape(5.dp),
             border = BorderStroke(2.dp, Color.Red)
-        ) {
+        )
+        {
             Text(
                 text = "MPESA",
                 color = Color.Green
@@ -138,7 +132,8 @@ fun MyIntents(){
                 .padding(start = 30.dp, end = 30.dp),
             shape = RoundedCornerShape(5.dp),
             border = BorderStroke(2.dp, Color.Red)
-        ) {
+        )
+        {
             Text(
                 text = "CAMERA",
                 color = Color.Green
@@ -161,7 +156,8 @@ fun MyIntents(){
                 .padding(start = 30.dp, end = 30.dp),
             shape = RoundedCornerShape(5.dp),
             border = BorderStroke(2.dp, Color.Red)
-        ) {
+        )
+        {
             Text(
                 text = "EMAIL",
                 color = Color.Green
@@ -182,7 +178,8 @@ fun MyIntents(){
                 .padding(start = 30.dp, end = 30.dp),
             shape = RoundedCornerShape(5.dp),
             border = BorderStroke(2.dp, Color.Red)
-        ) {
+        )
+        {
             Text(
                 text = "SMS",
                 color = Color.Green
@@ -202,7 +199,8 @@ fun MyIntents(){
                 .padding(start = 30.dp, end = 30.dp),
             shape = RoundedCornerShape(5.dp),
             border = BorderStroke(2.dp, Color.Red)
-        ) {
+        )
+        {
             Text(
                 text = "CALL",
                 color = Color.Green
@@ -223,7 +221,8 @@ fun MyIntents(){
                 .padding(start = 30.dp, end = 30.dp),
             shape = RoundedCornerShape(5.dp),
             border = BorderStroke(2.dp, Color.Red)
-        ) {
+        )
+        {
             Text(
                 text = "SHARE",
                 color = Color.Green

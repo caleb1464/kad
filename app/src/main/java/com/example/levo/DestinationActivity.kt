@@ -56,28 +56,26 @@ class DestinationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-Destination()
+            Destination()
         }
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Destination(){
-
+fun Destination() {
     Column (modifier = Modifier
-        .fillMaxSize())
+        .fillMaxSize()
+    )
     {
         val mContext = LocalContext.current
         var search by remember {mutableStateOf("")}
-//Start of TopAppBar
-
+        //Start of TopAppBar
         TopAppBar(
             title = { Text(text = "Destination", color = Color.White) },
             colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Red),
             navigationIcon = {
-                IconButton(onClick = {mContext.startActivity(Intent(mContext,MainActivity::class.java))},
-                )
+                IconButton(onClick = {mContext.startActivity(Intent(mContext,MainActivity::class.java))})
                 {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
@@ -86,7 +84,6 @@ fun Destination(){
                     )
                 }
             },
-
             actions = {
                 IconButton(
                     onClick = {
@@ -111,10 +108,9 @@ fun Destination(){
                     contentDescription = "Settings",
                     tint = Color.White
                 )
-
             },
-
             )//End of TopAppBar
+
         //Start of Box
         Box(modifier = Modifier
             .fillMaxWidth()
@@ -123,7 +119,8 @@ fun Destination(){
         {
              Image(painter = painterResource(id = R.drawable.mal),
                  contentDescription ="Mal",
-                 modifier = Modifier.fillMaxSize(),
+                 modifier = Modifier
+                     .fillMaxSize(),
                  contentScale = ContentScale.Crop
              )
 
@@ -133,7 +130,6 @@ fun Destination(){
                 fontWeight = FontWeight.Bold,
             )
             //End of Box
-
         }
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -155,13 +151,14 @@ fun Destination(){
             fontWeight = FontWeight.Bold,
             fontStyle = FontStyle.Italic,
             textDecoration = TextDecoration.Underline,
-            fontSize = 25.sp)
+            fontSize = 25.sp
+        )
 
         Spacer(modifier = Modifier.height(10.dp))
 
         //Row
-        Row (modifier = Modifier.horizontalScroll(rememberScrollState())
-        ) {
+        Row (modifier = Modifier.horizontalScroll(rememberScrollState()))
+        {
             //Card
             Card(modifier = Modifier
                 .width(200.dp)
@@ -205,7 +202,8 @@ fun Destination(){
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.peru), contentDescription = "peru",
+                        Image(painter = painterResource(id = R.drawable.peru),
+                            contentDescription = "peru",
                             modifier = Modifier
                                 .fillMaxSize(),
                             contentScale = ContentScale.Crop
@@ -235,7 +233,8 @@ fun Destination(){
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.newyork), contentDescription = "newyork",
+                        Image(painter = painterResource(id = R.drawable.newyork),
+                            contentDescription = "newyork",
                             modifier = Modifier
                                 .fillMaxSize(),
                             contentScale = ContentScale.Crop
@@ -265,7 +264,8 @@ fun Destination(){
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.moscow), contentDescription = "moscow",
+                        Image(painter = painterResource(id = R.drawable.moscow),
+                            contentDescription = "moscow",
                             modifier = Modifier
                                 .fillMaxSize(),
                             contentScale = ContentScale.Crop
@@ -295,7 +295,8 @@ fun Destination(){
                         contentAlignment = Alignment.Center
                     )
                     {
-                        Image(painter = painterResource(id = R.drawable.dubai), contentDescription = "dubai",
+                        Image(painter = painterResource(id = R.drawable.dubai),
+                            contentDescription = "dubai",
                             modifier = Modifier
                                 .fillMaxSize(),
                             contentScale = ContentScale.Crop
@@ -322,7 +323,6 @@ fun Destination(){
         {
             Text(text = "Explore")
         }
-
     }
 }
 

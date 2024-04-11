@@ -61,11 +61,10 @@ fun MyForm() {
     
     Column(modifier = Modifier
         .fillMaxSize()
-        .paint(painterResource(id = R.drawable.background),
+        .paint(painterResource(id = R.drawable.splash),
             contentScale = ContentScale.FillBounds
         )
     )
-
     {
         var firstname by remember { mutableStateOf("") }
         var lastname by remember { mutableStateOf("") }
@@ -74,9 +73,7 @@ fun MyForm() {
         var contact by remember { mutableStateOf("") }
         Box(modifier = Modifier.fillMaxWidth(),
             contentAlignment = Alignment.Center)
-
         {
-
             Image(painter = painterResource(id = R.drawable.register),
                 contentDescription ="register",
                 modifier = Modifier.size(150.dp)
@@ -162,12 +159,10 @@ fun MyForm() {
                 .fillMaxWidth()
                 .padding(start = 30.dp, end = 30.dp)
         )
-
         {
             Text(text = "Continue")
         }
     }
-
 }
 @Preview(showBackground = true)
 @Composable

@@ -1,8 +1,5 @@
 package com.example.levo
-
 import android.content.Intent
-
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -50,17 +47,16 @@ class LayoutActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Layout()  {
-    Column(modifier = Modifier.fillMaxSize()) {
+fun Layout() {
+    Column(modifier = Modifier.fillMaxSize())
+    {
         val mContext = LocalContext.current
-//Start of TopAppBar
-
+        //Start of TopAppBar
         TopAppBar(
             title = { Text(text = "Home", color = Color.White) },
             colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Red),
             navigationIcon = {
-                IconButton(onClick = {mContext.startActivity(Intent(mContext,MainActivity::class.java))},
-                    )
+                IconButton(onClick = {mContext.startActivity(Intent(mContext,MainActivity::class.java))},)
                 {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
@@ -69,7 +65,6 @@ fun Layout()  {
                     )
                 }
             },
-
             actions = {
                 IconButton(
                     onClick = {
@@ -94,11 +89,9 @@ fun Layout()  {
                     contentDescription = "Settings",
                     tint = Color.White
                 )
-
             },
-
-
-)//End of TopAppBar
+    )
+//End of TopAppBar
 
 Text(
     text = "BREEDS OF CATS",
@@ -124,7 +117,6 @@ Row {
         Text(text = "This is a nice breed")
 
     }
-
 }
         Spacer(modifier = Modifier.height(20.dp))
 //Row 2
